@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="764.0" maxWidth="1232.0" minHeight="764.0" minWidth="1024.0" prefHeight="764.0" prefWidth="1146.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CartViewController">
+   <children>
+      <Pane layoutX="111.0" layoutY="67.0" prefHeight="644.0" prefWidth="997.0">
+         <children>
+            <Button fx:id="borrowBookButton" layoutX="880.0" layoutY="600.0" mnemonicParsing="false" onAction="#borrowBook" text="Wypożycz" />
+            <TableView fx:id="booksTable" layoutX="35.0" layoutY="45.0" prefHeight="524.0" prefWidth="948.0">
+               <columns>
+                  <TableColumn fx:id="TitleColumn" prefWidth="210.0" text="Tytuł" />
+                  <TableColumn fx:id="authorColumn" prefWidth="102.0" text="Autor" />
+                  <TableColumn fx:id="CategoryColumn" prefWidth="168.0" text="Kategoria" />
+                  <TableColumn fx:id="publishingHouseColumn" prefWidth="255.0" text="Wydawnictwo" />
+                  <TableColumn fx:id="ISBNColumn" minWidth="0.0" prefWidth="211.0" text="ISBN" />
+               </columns>
+            </TableView>
+            <Button fx:id="removeFromCartButton" layoutX="800.0" layoutY="600.0" mnemonicParsing="false" onAction="#removeFromCart" text="Usuń" />
+            <Button fx:id="clearCartButton" layoutX="700.0" layoutY="600.0" mnemonicParsing="false" onAction="#clearCart" text="Wyczyść" />
+         </children>
+      </Pane>
+      <Label fx:id="cardLabel" layoutX="854.0" layoutY="15.0" prefHeight="52.0" prefWidth="135.0" textFill="#999999" />
+      <Button fx:id="goToPanelButton" layoutX="854.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToPanel" prefHeight="25.0" prefWidth="122.0" text="Panel" />
+      <Button fx:id="logoutButton" layoutX="989.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleLogout" text="Wyloguj" />
+      <Button fx:id="sendAddRequestButton" layoutX="573.0" layoutY="29.0" mnemonicParsing="false" onAction="#sendAddRequest" text="Wyślij prośbę o dodanie do zbioru" />
+      <Button fx:id="borrowHistoryButton" layoutX="393.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToBorrowHistory" text="Historia wypożyczeń" />
+      <Text fill="#fffbfb" layoutX="27.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koszyk wypożyczeń">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

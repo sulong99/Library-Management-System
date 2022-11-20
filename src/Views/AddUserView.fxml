@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<AnchorPane maxHeight="764.0" maxWidth="1232.0" minHeight="587.0" minWidth="625.0" prefHeight="587.0" prefWidth="625.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddUserController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="109.0" prefHeight="479.0" prefWidth="625.0">
+         <children>
+            <Text fx:id="Login" fill="#f5f5f5" layoutX="90.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Password" fill="#f5f5f5" layoutX="90.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Name" fill="#f5f5f5" layoutX="90.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imię:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Surname" fill="#f5f5f5" layoutX="90.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Address" fill="#f5f5f5" layoutX="90.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adres:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Permission" fill="#f5f5f5" layoutX="90.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uprawnienia:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Button fx:id="addUserButton" layoutX="339.0" layoutY="398.0" mnemonicParsing="false" onAction="#addUser" text="Dodaj użytkownika" />
+            <Button fx:id="returnButton" layoutX="160.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleReturn" text="Powrót" />
+            <JFXTextField fx:id="username" layoutX="181.0" layoutY="19.0" prefHeight="37.0" prefWidth="345.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="firstname" layoutX="181.0" layoutY="134.0" prefHeight="37.0" prefWidth="345.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="surname" layoutX="235.0" layoutY="190.0" prefHeight="37.0" prefWidth="291.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="address" layoutX="181.0" layoutY="245.0" prefHeight="37.0" prefWidth="345.0" >
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" layoutX="181.0" layoutY="74.0" prefHeight="37.0" prefWidth="345.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXPasswordField>
+            <ChoiceBox fx:id="permission" layoutX="285.0" layoutY="296.0" prefHeight="37.0" prefWidth="242.0" />
+         </children>
+      </Pane>
+      <Label layoutX="42.0" layoutY="23.0" prefHeight="86.0" prefWidth="539.0" text="Dodaj użytkownika" textFill="#999999">
+         <font>
+            <Font name="System Bold" size="59.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

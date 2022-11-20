@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="loginButton" prefHeight="367.0" prefWidth="419.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <JFXTextField fx:id="username" labelFloat="true" layoutX="95.0" layoutY="122.0" prefHeight="33.0" prefWidth="259.0" promptText="Login">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="97.0" layoutY="194.0" onAction="#handleLoginButtonAction" prefHeight="34.0" prefWidth="259.0" promptText="Hasło">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton layoutX="95.0" layoutY="276.0" onAction="#handleLoginButtonAction" prefHeight="40.0" prefWidth="90.0" styleClass="login-button" text="Zaloguj" />
+      <FontAwesomeIconView glyphName="LOCK" layoutX="196.0" layoutY="101.0" size="55" />
+      <FontAwesomeIconView glyphName="USER" layoutX="64.0" layoutY="149.0" size="25" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="64.0" layoutY="224.0" size="25" />
+      <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="367.0" layoutY="19.0" onAction="#handleCancelButtonAction" prefHeight="40.0" prefWidth="35.0" scaleShape="false" style="-fx-background-color: transparent;" styleClass="login-button" textAlignment="CENTER" textOverrun="CLIP" AnchorPane.bottomAnchor="308.0" AnchorPane.leftAnchor="367.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="19.0">
+         <graphic>
+            <FontAwesomeIconView fx:id="closeButton" glyphName="CLOSE" size="25.0" wrappingWidth="18.857144504785538">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
+      <JFXButton fx:id="registerButton" layoutX="231.0" layoutY="276.0" onAction="#handleRegisterButtonAction" prefHeight="40.0" prefWidth="105.0" styleClass="login-button" text="Rejestracja" />
+   </children>
+</AnchorPane>

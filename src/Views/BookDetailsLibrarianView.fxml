@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="764.0" maxWidth="1232.0" minHeight="764.0" minWidth="1024.0" prefHeight="764.0" prefWidth="1146.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BookDetailsLibrarianController">
+   <children>
+      <Pane layoutX="109.0" layoutY="68.0" prefHeight="644.0" prefWidth="997.0">
+         <children>
+            <Text fx:id="Title" fill="#f5f5f5" layoutX="35.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tytuł: " wrappingWidth="956.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Author" fill="#f5f5f5" layoutX="35.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor:" wrappingWidth="956.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Publisher" fill="#f5f5f5" layoutX="35.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wydawnictwo:" wrappingWidth="956.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Category" fill="#f5f5f5" layoutX="35.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategoria:" wrappingWidth="956.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="ISBN" fill="#f5f5f5" layoutX="35.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN: " wrappingWidth="956.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="ReleseYear" fill="#f5f5f5" layoutX="35.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rok wydania:" wrappingWidth="956.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Desctription" fill="#f5f5f5" layoutX="35.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opis:" wrappingWidth="956.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Button fx:id="sendDeleteRequestButton" layoutX="834.0" layoutY="591.0" mnemonicParsing="false" onAction="#sendDeleteRequest" text="Usuń książkę" />
+         </children>
+      </Pane>
+      <Label fx:id="cardLabel" layoutX="854.0" layoutY="15.0" prefHeight="52.0" prefWidth="135.0" textFill="#999999" />
+      <Button fx:id="logoutButton" layoutX="989.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleLogout" text="Wyloguj" />
+      <Button fx:id="goToLibrarianPanelButton" layoutX="854.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToLibrarianPanel" prefHeight="25.0" prefWidth="122.0" text="Panel" />
+      <Button fx:id="sendAddRequestButton" layoutX="573.0" layoutY="29.0" mnemonicParsing="false" onAction="#sendAddRequest" text="Wyślij prośbę o dodanie do zbioru" />
+      <Button fx:id="borrowHistoryButton" layoutX="390.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToBorrowHistory" text="Historia wypożyczeń" />
+   </children>
+</AnchorPane>

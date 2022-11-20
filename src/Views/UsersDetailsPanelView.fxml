@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="764.0" maxWidth="1232.0" minHeight="764.0" minWidth="1024.0" prefHeight="764.0" prefWidth="1146.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UsersDetailsPanelController">
+   <children>
+      <Pane layoutX="111.0" layoutY="67.0" prefHeight="644.0" prefWidth="997.0">
+         <children>
+            <Button fx:id="AddReaderButton1" layoutX="496.0" layoutY="599.0" mnemonicParsing="false" onAction="#addReaderDetails" text="Dodaj Czytelnika" />
+            <Button fx:id="deleteReaderButton" layoutX="827.0" layoutY="599.0" mnemonicParsing="false" onAction="#deleteReader" text="Usuń Czytelnika" />
+            <Button fx:id="DetailsReaderButton" layoutX="655.0" layoutY="599.0" mnemonicParsing="false" onAction="#showReaderDetails" text="Szczegółowe Dane" />
+            <TabPane fx:id="tabPane" layoutX="14.0" layoutY="64.0" prefHeight="516.0" prefWidth="955.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="EmployeesTab" text="Pracownicy">
+                     <content>
+                        <TableView fx:id="EmployeesTable" prefHeight="481.0" prefWidth="896.0">
+                           <columns>
+                              <TableColumn fx:id="NameColumn" prefWidth="163.9999771118164" text="Imię" />
+                              <TableColumn fx:id="SurnameColumn" prefWidth="154.39996337890625" text="Nazwisko" />
+                              <TableColumn fx:id="EmployeeIdColumn" prefWidth="163.19998168945312" text="ID Pracownika" />
+                              <TableColumn fx:id="AddressColumn" minWidth="0.0" prefWidth="287.199951171875" text="Adres" />
+                              <TableColumn fx:id="PermissionsColumn" prefWidth="186.4000244140625" text="Uprawnienia" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="ReadersTab" text="Czytelnicy">
+                     <content>
+                        <TableView fx:id="ReadersTable" prefHeight="485.0" prefWidth="775.0">
+                           <columns>
+                              <TableColumn fx:id="NameColumn1" prefWidth="113.60002899169922" text="Imię" />
+                              <TableColumn fx:id="SurnameColumn1" prefWidth="129.59999084472656" text="Nazwisko" />
+                              <TableColumn fx:id="ReaderIdColumn1" prefWidth="159.20001220703125" text="Numer Czytelnika" />
+                              <TableColumn fx:id="AddressColumn1" prefWidth="310.4000244140625" text="Adres" />
+                              <TableColumn fx:id="NumberBorrowedBookColumn" prefWidth="242.0" text="Ilość wypożyczonych książek" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <Button fx:id="DeleteEmployeeButton" layoutX="823.0" layoutY="599.0" mnemonicParsing="false" onAction="#deleteEmployee" text="Usuń Pracownika" />
+            <Button fx:id="AddEmployeeButton1" layoutX="492.0" layoutY="599.0" mnemonicParsing="false" onAction="#addEmployeeDetails" text="Dodaj Pracownika" />
+            <Button fx:id="DetailsEmployeeButton1" layoutX="655.0" layoutY="599.0" mnemonicParsing="false" onAction="#showEmployeeDetails" text="Szczegółowe Dane" />
+         </children>
+      </Pane>
+      <Label fx:id="cardLabel" layoutX="854.0" layoutY="15.0" prefHeight="52.0" prefWidth="135.0" textFill="#999999" />
+      <Button fx:id="inquiriesButton" layoutX="718.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToInquiries" prefHeight="25.0" prefWidth="122.0" text="Zapytania" />
+      <Button fx:id="logoutButton" layoutX="989.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleLogout" text="Wyloguj" />
+      <Button fx:id="UsersButton" layoutX="594.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToUsersDetails" text="Użytkownicy" />
+      <Button fx:id="libraryCollectionButton" layoutX="432.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToLibraryCollection" text="Zbiór biblioteczny" />
+      <Button fx:id="goToRaportsButton1" layoutX="854.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToRaports" prefHeight="25.0" prefWidth="122.0" text="Raporty" />
+   </children>
+</AnchorPane>

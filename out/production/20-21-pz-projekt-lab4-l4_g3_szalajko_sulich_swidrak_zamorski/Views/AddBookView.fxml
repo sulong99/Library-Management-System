@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<AnchorPane maxHeight="764.0" maxWidth="1232.0" minHeight="587.0" minWidth="625.0" prefHeight="685.0" prefWidth="625.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddBookController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="109.0" prefHeight="587.0" prefWidth="626.0">
+         <children>
+            <Text fx:id="Title" fill="#f5f5f5" layoutX="90.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tytuł:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Author" fill="#f5f5f5" layoutX="90.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Publisher" fill="#f5f5f5" layoutX="90.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wydawca:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="Category" fill="#f5f5f5" layoutX="90.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategoria:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="ISBN" fill="#f5f5f5" layoutX="90.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="ReleseYear" fill="#f5f5f5" layoutX="90.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data wydania:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Button fx:id="addBookButton" layoutX="403.0" layoutY="516.0" mnemonicParsing="false" onAction="#addBook" text="Dodaj Książkę" />
+            <Button fx:id="returnButton" layoutX="160.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleReturn" text="Powrót" />
+            <JFXTextField fx:id="title" layoutX="181.0" layoutY="19.0" prefHeight="37.0" prefWidth="345.0" >
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="publisher" layoutX="235.0" layoutY="134.0" prefHeight="37.0" prefWidth="291.0" >
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="category" layoutX="235.0" layoutY="190.0" prefHeight="37.0" prefWidth="291.0" >
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="isbn" layoutX="181.0" layoutY="245.0" prefHeight="37.0" prefWidth="345.0" >
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <Text fx:id="Description" fill="#f5f5f5" layoutX="90.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opis:" wrappingWidth="344.837890625">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="description" layoutX="173.0" layoutY="351.0" prefHeight="125.0" prefWidth="353.0" >
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="releseYear" layoutX="289.0" layoutY="299.0" prefHeight="37.0" prefWidth="238.0" >
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="author" layoutX="181.0" layoutY="74.0" prefHeight="37.0" prefWidth="345.0" >
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Label layoutX="117.0" layoutY="22.0" prefHeight="86.0" prefWidth="390.0" text="Dodaj książkę" textFill="#999999">
+         <font>
+            <Font name="System Bold" size="59.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

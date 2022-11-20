@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="764.0" maxWidth="1232.0" minHeight="764.0" minWidth="1024.0" prefHeight="764.0" prefWidth="1146.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminPanelController">
+   <children>
+      <Pane layoutX="111.0" layoutY="67.0" prefHeight="644.0" prefWidth="997.0">
+         <children>
+            <JFXTextField fx:id="searchField" layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="267.0" promptText="Wyszukaj">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <TabPane fx:id="tabPane" layoutX="14.0" layoutY="64.0" prefHeight="516.0" prefWidth="955.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="BooksTab" text="Lista książek">
+                     <content>
+                        <TableView fx:id="booksTable" prefHeight="481.0" prefWidth="896.0">
+                           <columns>
+                              <TableColumn fx:id="TitleColumn" prefWidth="210.0" text="Tytuł" />
+                              <TableColumn fx:id="authorColumn" prefWidth="102.0" text="Autor" />
+                              <TableColumn fx:id="CategoryColumn" prefWidth="168.0" text="Kategoria" />
+                              <TableColumn fx:id="publishingHouseColumn" prefWidth="178.0" text="Wydawnictwo" />
+                              <TableColumn fx:id="ISBNColumn" minWidth="0.0" prefWidth="117.0" text="ISBN" />
+                              <TableColumn fx:id="availableColumn" prefWidth="179.0" text="Dostępność" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="borrowedTab" text="Wypożyczone">
+                     <content>
+                        <TableView fx:id="borrowedbooksTable" prefHeight="485.0" prefWidth="775.0">
+                           <columns>
+                              <TableColumn fx:id="TitleColumn1" prefWidth="131.99999237060547" text="Tytuł" />
+                              <TableColumn fx:id="authorColumn1" prefWidth="126.39999389648438" text="Autor" />
+                              <TableColumn fx:id="CategoryColumn1" prefWidth="120.800048828125" text="Kategoria" />
+                              <TableColumn fx:id="publishingHouseColumn1" prefWidth="140.79995727539062" text="Wydawnictwo" />
+                              <TableColumn fx:id="ISBNColumn1" prefWidth="120.79998779296875" text="ISBN" />
+                              <TableColumn fx:id="BorrowDateColumn" prefWidth="161.60009765625" text="Data wypożyczenia" />
+                              <TableColumn fx:id="BorrowerColumn" prefWidth="161.60009765625" text="Wypożyczający" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <Button fx:id="DeleteBookButton" layoutX="854.0" layoutY="599.0" mnemonicParsing="false" onAction="#deleteBook" text="Usuń książkę" />
+            <Button fx:id="AddBookButton1" layoutX="613.0" layoutY="599.0" mnemonicParsing="false" onAction="#addBooksDetails" text="Dodaj książkę" />
+         </children>
+      </Pane>
+      <Label fx:id="cardLabel" layoutX="854.0" layoutY="15.0" prefHeight="52.0" prefWidth="135.0" textFill="#999999" />
+      <Button fx:id="inquiriesButton" layoutX="718.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToInquiries" prefHeight="25.0" prefWidth="122.0" text="Zapytania" />
+      <Button fx:id="logoutButton" layoutX="989.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleLogout" text="Wyloguj" />
+      <Button fx:id="UsersButton" layoutX="594.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToUsersDetails" text="Użytkownicy" />
+      <Button fx:id="libraryCollectionButton" layoutX="432.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToLibraryCollection" text="Zbiór biblioteczny" />
+      <Button fx:id="goToRaportsButton1" layoutX="854.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToRaports" prefHeight="25.0" prefWidth="122.0" text="Raporty" />
+   </children>
+</AnchorPane>
